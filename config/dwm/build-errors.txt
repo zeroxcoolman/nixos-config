@@ -1,0 +1,41 @@
+dwm.c:248:13: warning: ‘setcurrentdesktop’ declared ‘static’ but never defined [-Wunused-function]
+  248 | static void setcurrentdesktop(void);
+      |             ^~~~~~~~~~~~~~~~~
+dwm.c:249:13: warning: ‘setdesktopnames’ declared ‘static’ but never defined [-Wunused-function]
+  249 | static void setdesktopnames(void);
+      |             ^~~~~~~~~~~~~~~
+dwm.c:255:13: warning: ‘setnumdesktops’ declared ‘static’ but never defined [-Wunused-function]
+  255 | static void setnumdesktops(void);
+      |             ^~~~~~~~~~~~~~
+dwm.c:257:13: warning: ‘setviewport’ declared ‘static’ but never defined [-Wunused-function]
+  257 | static void setviewport(void);
+      |             ^~~~~~~~~~~
+dwm.c: In function ‘spawnbar’:
+dwm.c:1827:5: warning: ignoring return value of ‘system’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1827 |     system(altbarcmd);
+      |     ^~~~~~~~~~~~~~~~~
+dwm.c: At top level:
+dwm.c:2298:6: warning: ‘swapwindow’ defined but not used [-Wunused-function]
+ 2298 | void swapwindow(const Arg *arg) {
+      |      ^~~~~~~~~~
+dwm.c:2288:6: warning: ‘zoom’ defined but not used [-Wunused-function]
+ 2288 | void zoom(const Arg *arg) {
+      |      ^~~~
+In file included from dwm.c:332:
+config.h:116:20: warning: ‘chromium’ defined but not used [-Wunused-variable]
+  116 | static const char *chromium[] = {"chromium", NULL};
+      |                    ^~~~~~~~
+config.h:115:20: warning: ‘emacsclient’ defined but not used [-Wunused-variable]
+  115 | static const char *emacsclient[] = {"emacsclient", "-c", "-a", "", NULL};
+      |                    ^~~~~~~~~~~
+config.h:110:20: warning: ‘slock’ defined but not used [-Wunused-variable]
+  110 | static const char *slock[] = {"slock", NULL};
+      |                    ^~~~~
+dwm.c: In function ‘reload’:
+dwm.c:2286:31: warning: argument 1 null where non-null expected [-Wnonnull]
+ 2286 | void reload(const Arg *arg) { execvp(argv0, (char *const[]){argv0, NULL}); }
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from dwm.c:38:
+/usr/include/unistd.h:599:12: note: in a call to function ‘execvp’ declared ‘nonnull’
+  599 | extern int execvp (const char *__file, char *const __argv[])
+      |            ^~~~~~

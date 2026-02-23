@@ -1,0 +1,275 @@
+In file included from config.h:3,
+                 from dwm.c:304:
+movestack.c: In function ‘movestack’:
+movestack.c:7:46: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+    7 |                 for(c = selmon->sel->next; c && (!ISVISIBLE(c) || c->isfloating); c = c->next);
+movestack.c:7:80: error: expected ‘;’ before ‘)’ token
+    7 |                 for(c = selmon->sel->next; c && (!ISVISIBLE(c) || c->isfloating); c = c->next);
+      |                                                                                ^
+      |                                                                                ;
+movestack.c:7:17: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+    7 |                 for(c = selmon->sel->next; c && (!ISVISIBLE(c) || c->isfloating); c = c->next);
+      |                 ^~~
+movestack.c:7:83: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+    7 |                 for(c = selmon->sel->next; c && (!ISVISIBLE(c) || c->isfloating); c = c->next);
+      |                                                                                   ^
+movestack.c:7:94: error: expected ‘;’ before ‘)’ token
+    7 |                 for(c = selmon->sel->next; c && (!ISVISIBLE(c) || c->isfloating); c = c->next);
+      |                                                                                              ^
+      |                                                                                              ;
+movestack.c:7:94: error: expected statement before ‘)’ token
+movestack.c:9:52: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+    9 |                         for(c = selmon->clients; c && (!ISVISIBLE(c) || c->isfloating); c = c->next);
+movestack.c:9:86: error: expected ‘;’ before ‘)’ token
+    9 |                         for(c = selmon->clients; c && (!ISVISIBLE(c) || c->isfloating); c = c->next);
+      |                                                                                      ^
+      |                                                                                      ;
+movestack.c:9:25: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+    9 |                         for(c = selmon->clients; c && (!ISVISIBLE(c) || c->isfloating); c = c->next);
+      |                         ^~~
+movestack.c:9:89: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+    9 |                         for(c = selmon->clients; c && (!ISVISIBLE(c) || c->isfloating); c = c->next);
+      |                                                                                         ^
+movestack.c:8:17: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+    8 |                 if(!c)
+      |                 ^~
+movestack.c:9:89: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+    9 |                         for(c = selmon->clients; c && (!ISVISIBLE(c) || c->isfloating); c = c->next);
+      |                                                                                         ^
+movestack.c:9:100: error: expected ‘;’ before ‘)’ token
+    9 |                         for(c = selmon->clients; c && (!ISVISIBLE(c) || c->isfloating); c = c->next);
+      |                                                                                                    ^
+      |                                                                                                    ;
+movestack.c:9:100: error: expected statement before ‘)’ token
+movestack.c:15:44: error: expected identifier before ‘!’ token
+   15 |                         if(ISVISIBLE(i) && !i->isfloating)
+      |                                            ^
+movestack.c:15:25: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   15 |                         if(ISVISIBLE(i) && !i->isfloating)
+      |                         ^~
+movestack.c:15:58: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   15 |                         if(ISVISIBLE(i) && !i->isfloating)
+      |                                                          ^
+movestack.c:14:17: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+   14 |                 for(i = selmon->clients; i != selmon->sel; i = i->next)
+      |                 ^~~
+movestack.c:15:58: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+   15 |                         if(ISVISIBLE(i) && !i->isfloating)
+      |                                                          ^
+movestack.c:15:58: error: expected statement before ‘)’ token
+movestack.c:19:52: error: expected identifier before ‘!’ token
+   19 |                                 if(ISVISIBLE(i) && !i->isfloating)
+      |                                                    ^
+movestack.c:19:33: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   19 |                                 if(ISVISIBLE(i) && !i->isfloating)
+      |                                 ^~
+movestack.c:19:66: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   19 |                                 if(ISVISIBLE(i) && !i->isfloating)
+      |                                                                  ^
+movestack.c:18:25: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+   18 |                         for(; i; i = i->next)
+      |                         ^~~
+movestack.c:19:66: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+   19 |                                 if(ISVISIBLE(i) && !i->isfloating)
+      |                                                                  ^
+movestack.c:19:66: error: expected statement before ‘)’ token
+dwm.c: In function ‘configurerequest’:
+dwm.c:665:41: error: expected statement before ‘)’ token
+  665 |                         if (ISVISIBLE(c))
+      |                                         ^
+dwm.c: In function ‘detachstack’:
+dwm.c:53:43: error: expected ‘;’ before ‘)’ token
+   53 | #define ISVISIBLEONTAG(C, T) (C->tags & T))
+      |                                           ^
+dwm.c:54:33: note: in expansion of macro ‘ISVISIBLEONTAG’
+   54 | #define ISVISIBLE(C)            ISVISIBLEONTAG(C, C->mon->tagset[C->mon->seltags])
+      |                                 ^~~~~~~~~~~~~~
+dwm.c:737:47: note: in expansion of macro ‘ISVISIBLE’
+  737 |                 for (t = c->mon->stack; t && !ISVISIBLE(t); t = t->snext);
+      |                                               ^~~~~~~~~
+dwm.c:737:17: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  737 |                 for (t = c->mon->stack; t && !ISVISIBLE(t); t = t->snext);
+      |                 ^~~
+dwm.c:737:61: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  737 |                 for (t = c->mon->stack; t && !ISVISIBLE(t); t = t->snext);
+      |                                                             ^
+dwm.c:737:73: error: expected ‘;’ before ‘)’ token
+  737 |                 for (t = c->mon->stack; t && !ISVISIBLE(t); t = t->snext);
+      |                                                                         ^
+      |                                                                         ;
+dwm.c:737:73: error: expected statement before ‘)’ token
+dwm.c: In function ‘focus’:
+dwm.c:844:32: error: expected statement before ‘)’ token
+  844 |         if (!c || !ISVISIBLE(c))
+      |                                ^
+dwm.c:53:43: error: expected ‘;’ before ‘)’ token
+   53 | #define ISVISIBLEONTAG(C, T) (C->tags & T))
+      |                                           ^
+dwm.c:54:33: note: in expansion of macro ‘ISVISIBLEONTAG’
+   54 | #define ISVISIBLE(C)            ISVISIBLEONTAG(C, C->mon->tagset[C->mon->seltags])
+      |                                 ^~~~~~~~~~~~~~
+dwm.c:845:47: note: in expansion of macro ‘ISVISIBLE’
+  845 |                 for (c = selmon->stack; c && !ISVISIBLE(c); c = c->snext);
+      |                                               ^~~~~~~~~
+dwm.c:845:17: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  845 |                 for (c = selmon->stack; c && !ISVISIBLE(c); c = c->snext);
+      |                 ^~~
+dwm.c:845:61: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  845 |                 for (c = selmon->stack; c && !ISVISIBLE(c); c = c->snext);
+      |                                                             ^
+dwm.c:845:73: error: expected ‘;’ before ‘)’ token
+  845 |                 for (c = selmon->stack; c && !ISVISIBLE(c); c = c->snext);
+      |                                                                         ^
+      |                                                                         ;
+dwm.c:845:73: error: expected statement before ‘)’ token
+dwm.c: In function ‘focusstack’:
+dwm.c:53:43: error: expected ‘;’ before ‘)’ token
+   53 | #define ISVISIBLEONTAG(C, T) (C->tags & T))
+      |                                           ^
+dwm.c:54:33: note: in expansion of macro ‘ISVISIBLEONTAG’
+   54 | #define ISVISIBLE(C)            ISVISIBLEONTAG(C, C->mon->tagset[C->mon->seltags])
+      |                                 ^~~~~~~~~~~~~~
+dwm.c:900:51: note: in expansion of macro ‘ISVISIBLE’
+  900 |                 for (c = selmon->sel->next; c && !ISVISIBLE(c); c = c->next);
+      |                                                   ^~~~~~~~~
+dwm.c:900:17: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  900 |                 for (c = selmon->sel->next; c && !ISVISIBLE(c); c = c->next);
+      |                 ^~~
+dwm.c:900:65: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  900 |                 for (c = selmon->sel->next; c && !ISVISIBLE(c); c = c->next);
+      |                                                                 ^
+dwm.c:900:76: error: expected ‘;’ before ‘)’ token
+  900 |                 for (c = selmon->sel->next; c && !ISVISIBLE(c); c = c->next);
+      |                                                                            ^
+      |                                                                            ;
+dwm.c:900:76: error: expected statement before ‘)’ token
+dwm.c:53:43: error: expected ‘;’ before ‘)’ token
+   53 | #define ISVISIBLEONTAG(C, T) (C->tags & T))
+      |                                           ^
+dwm.c:54:33: note: in expansion of macro ‘ISVISIBLEONTAG’
+   54 | #define ISVISIBLE(C)            ISVISIBLEONTAG(C, C->mon->tagset[C->mon->seltags])
+      |                                 ^~~~~~~~~~~~~~
+dwm.c:902:57: note: in expansion of macro ‘ISVISIBLE’
+  902 |                         for (c = selmon->clients; c && !ISVISIBLE(c); c = c->next);
+      |                                                         ^~~~~~~~~
+dwm.c:902:25: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  902 |                         for (c = selmon->clients; c && !ISVISIBLE(c); c = c->next);
+      |                         ^~~
+dwm.c:902:71: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  902 |                         for (c = selmon->clients; c && !ISVISIBLE(c); c = c->next);
+      |                                                                       ^
+dwm.c:901:17: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  901 |                 if (!c)
+      |                 ^~
+dwm.c:902:71: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  902 |                         for (c = selmon->clients; c && !ISVISIBLE(c); c = c->next);
+      |                                                                       ^
+dwm.c:902:82: error: expected ‘;’ before ‘)’ token
+  902 |                         for (c = selmon->clients; c && !ISVISIBLE(c); c = c->next);
+      |                                                                                  ^
+      |                                                                                  ;
+dwm.c:902:82: error: expected statement before ‘)’ token
+dwm.c:905:41: error: expected statement before ‘)’ token
+  905 |                         if (ISVISIBLE(i))
+      |                                         ^
+dwm.c:909:49: error: expected statement before ‘)’ token
+  909 |                                 if (ISVISIBLE(i))
+      |                                                 ^
+dwm.c: In function ‘monocle’:
+dwm.c:1282:33: error: expected statement before ‘)’ token
+ 1282 |                 if (ISVISIBLE(c))
+      |                                 ^
+dwm.c: In function ‘nexttagged’:
+dwm.c:1371:82: error: expected ‘;’ before ‘)’ token
+ 1371 |                 walked && (walked->isfloating || !ISVISIBLEONTAG(walked, c->tags));
+      |                                                                                  ^
+dwm.c:1370:9: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+ 1370 |         for(;
+      |         ^~~
+dwm.c:1372:17: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+ 1372 |                 walked = walked->next
+      |                 ^~~~~~
+dwm.c:1372:38: error: expected ‘;’ before ‘)’ token
+ 1372 |                 walked = walked->next
+      |                                      ^
+      |                                      ;
+ 1373 |         );
+      |         ~                             
+dwm.c:1373:9: error: expected statement before ‘)’ token
+ 1373 |         );
+      |         ^
+dwm.c: In function ‘nexttiled’:
+dwm.c:1380:52: error: expected ‘;’ before ‘)’ token
+ 1380 |         for (; c && (c->isfloating || !ISVISIBLE(c)); c = c->next);
+      |                                                    ^
+dwm.c:1380:9: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+ 1380 |         for (; c && (c->isfloating || !ISVISIBLE(c)); c = c->next);
+      |         ^~~
+dwm.c:1380:55: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+ 1380 |         for (; c && (c->isfloating || !ISVISIBLE(c)); c = c->next);
+      |                                                       ^
+dwm.c:1380:66: error: expected ‘;’ before ‘)’ token
+ 1380 |         for (; c && (c->isfloating || !ISVISIBLE(c)); c = c->next);
+      |                                                                  ^
+      |                                                                  ;
+dwm.c:1380:66: error: expected statement before ‘)’ token
+dwm.c: In function ‘restack’:
+dwm.c:1543:59: error: expected statement before ‘)’ token
+ 1543 |                         if (!c->isfloating && ISVISIBLE(c)) {
+      |                                                           ^
+dwm.c:1543:25: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+ 1543 |                         if (!c->isfloating && ISVISIBLE(c)) {
+      |                         ^~
+dwm.c:1543:61: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+ 1543 |                         if (!c->isfloating && ISVISIBLE(c)) {
+      |                                                             ^
+dwm.c:1542:17: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+ 1542 |                 for (c = m->stack; c; c = c->snext)
+      |                 ^~~
+dwm.c:1543:61: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+ 1543 |                         if (!c->isfloating && ISVISIBLE(c)) {
+      |                                                             ^
+dwm.c: In function ‘showhide’:
+dwm.c:1846:25: error: expected statement before ‘)’ token
+ 1846 |         if (ISVISIBLE(c)) {
+      |                         ^
+dwm.c:1846:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+ 1846 |         if (ISVISIBLE(c)) {
+      |         ^~
+dwm.c:1846:27: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+ 1846 |         if (ISVISIBLE(c)) {
+      |                           ^
+dwm.c:1852:11: error: ‘else’ without a previous ‘if’
+ 1852 |         } else {
+      |           ^~~~
+dwm.c: At top level:
+dwm.c:221:13: warning: ‘setcurrentdesktop’ declared ‘static’ but never defined [-Wunused-function]
+  221 | static void setcurrentdesktop(void);
+      |             ^~~~~~~~~~~~~~~~~
+dwm.c:222:13: warning: ‘setdesktopnames’ declared ‘static’ but never defined [-Wunused-function]
+  222 | static void setdesktopnames(void);
+      |             ^~~~~~~~~~~~~~~
+dwm.c:228:13: warning: ‘setnumdesktops’ declared ‘static’ but never defined [-Wunused-function]
+  228 | static void setnumdesktops(void);
+      |             ^~~~~~~~~~~~~~
+dwm.c:230:13: warning: ‘setviewport’ declared ‘static’ but never defined [-Wunused-function]
+  230 | static void setviewport(void);
+      |             ^~~~~~~~~~~
+dwm.c: In function ‘spawnbar’:
+dwm.c:1899:17: warning: ignoring return value of ‘system’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1899 |                 system(altbarcmd);
+      |                 ^~~~~~~~~~~~~~~~~
+dwm.c: At top level:
+dwm.c:2421:1: warning: ‘swapwindow’ defined but not used [-Wunused-function]
+ 2421 | swapwindow(const Arg *arg)
+      | ^~~~~~~~~~
+dwm.c:2409:1: warning: ‘zoom’ defined but not used [-Wunused-function]
+ 2409 | zoom(const Arg *arg)
+      | ^~~~
+config.h:105:20: warning: ‘chromium’ defined but not used [-Wunused-variable]
+  105 | static const char *chromium[] = { "chromium", NULL };
+      |                    ^~~~~~~~
+config.h:104:20: warning: ‘emacsclient’ defined but not used [-Wunused-variable]
+  104 | static const char *emacsclient[]  = { "emacsclient", "-c", "-a", "", NULL };
+      |                    ^~~~~~~~~~~
+make: *** [Makefile:12: dwm.o] Error 1

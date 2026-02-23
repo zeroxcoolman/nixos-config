@@ -1,0 +1,4 @@
+result
+*.swp
+*.tmp
+hardware-configuration.nix.backup

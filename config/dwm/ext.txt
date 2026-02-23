@@ -1,0 +1,39 @@
+movestack.c: In function ‘movestack’:
+dwm.c:52:33: error: implicit declaration of function ‘ISVISIBLEONTAG’; did you mean ‘ISVISIBLE’? [-Wimplicit-function-declaration]
+   52 | #define ISVISIBLE(C)            ISVISIBLEONTAG(C, C->mon->tagset[C->mon->seltags])
+      |                                 ^~~~~~~~~~~~~~
+movestack.c:7:51: note: in expansion of macro ‘ISVISIBLE’
+    7 |                 for(c = selmon->sel->next; c && (!ISVISIBLE(c) || c->isfloating); c = c->next);
+      |                                                   ^~~~~~~~~
+dwm.c: At top level:
+dwm.c:219:13: warning: ‘setcurrentdesktop’ declared ‘static’ but never defined [-Wunused-function]
+  219 | static void setcurrentdesktop(void);
+      |             ^~~~~~~~~~~~~~~~~
+dwm.c:220:13: warning: ‘setdesktopnames’ declared ‘static’ but never defined [-Wunused-function]
+  220 | static void setdesktopnames(void);
+      |             ^~~~~~~~~~~~~~~
+dwm.c:226:13: warning: ‘setnumdesktops’ declared ‘static’ but never defined [-Wunused-function]
+  226 | static void setnumdesktops(void);
+      |             ^~~~~~~~~~~~~~
+dwm.c:228:13: warning: ‘setviewport’ declared ‘static’ but never defined [-Wunused-function]
+  228 | static void setviewport(void);
+      |             ^~~~~~~~~~~
+dwm.c: In function ‘spawnbar’:
+dwm.c:1897:17: warning: ignoring return value of ‘system’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1897 |                 system(altbarcmd);
+      |                 ^~~~~~~~~~~~~~~~~
+dwm.c: At top level:
+dwm.c:2419:1: warning: ‘swapwindow’ defined but not used [-Wunused-function]
+ 2419 | swapwindow(const Arg *arg)
+      | ^~~~~~~~~~
+dwm.c:2407:1: warning: ‘zoom’ defined but not used [-Wunused-function]
+ 2407 | zoom(const Arg *arg)
+      | ^~~~
+In file included from dwm.c:302:
+config.h:105:20: warning: ‘chromium’ defined but not used [-Wunused-variable]
+  105 | static const char *chromium[] = { "chromium", NULL };
+      |                    ^~~~~~~~
+config.h:104:20: warning: ‘emacsclient’ defined but not used [-Wunused-variable]
+  104 | static const char *emacsclient[]  = { "emacsclient", "-c", "-a", "", NULL };
+      |                    ^~~~~~~~~~~
+make: *** [Makefile:12: dwm.o] Error 1

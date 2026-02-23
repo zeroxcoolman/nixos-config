@@ -1,0 +1,74 @@
+#!/usr/bin/env sh
+
+signal() {
+    xsetroot -name "fsignal:$*"
+}
+
+if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
+    cat <<EOF
+Usage: dwmc <command> [argument]
+
+Commands:
+  view <tag>            Switch to tag (0-8)
+  viewex <tag>          Same as view, but explicit
+  toggleviewex <tag>    Toggle visibility of tag
+  tagex <tag>           Move focused window to tag
+  toggletagex <tag>     Toggle tag assignment
+  viewall               View all tags
+  tagall                Tag window with all tags
+  setlayout <index>     Set layout by index
+  setlayoutex <index>   Same as above, explicit
+  togglebar             Toggle bar visibility
+  togglefloating        Toggle floating mode
+  zoom                  Promote window to master
+  killclient            Close focused window
+  quit                  Quit dwm
+  setmfact <float>      Adjust master area size
+  focusstack <n>        Move focus up/down stack
+  focusmon <n>          Focus monitor
+  tagmon <n>            Move window to monitor
+
+Examples:
+  dwmc view 3
+  dwmc setmfact 0.05
+  dwmc togglebar
+  dwmc focusstack 1
+
+EOF
+    exit 0
+fi
+
+case $# in
+1)
+    case $1 in
+    setlayout | view | viewall | togglebar | togglefloating | zoom | killclient | quit)
+        signal $1
+        ;;
+    *)
+        echo "Unknown command or missing one argument."
+        exit 1
+        ;;
+    esac
+    ;;
+2)
+    case $1 in
+    view)
+        signal $1 ui $2
+        ;;
+    viewex | toggleviewex | tagex | toggletagex | setlayoutex | focusstack | incnmaster | focusmon | tagmon)
+        signal $1 i $2
+        ;;
+    setmfact)
+        signal $1 f $2
+        ;;
+    *)
+        echo "Unknown command or one too many arguments."
+        exit 1
+        ;;
+    esac
+    ;;
+*)
+    echo "Too many arguments."
+    exit 1
+    ;;
+esac

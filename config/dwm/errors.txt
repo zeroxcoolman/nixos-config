@@ -1,0 +1,46 @@
+dwm.c:54:9: warning: ‘INTERSECT’ redefined
+   54 | #define INTERSECT(x,y,w,h,m)    (MAX(0, MIN((x)+(w),(m)->mx+(m)->mw) - MAX((x),(m)->mx)) \
+      |         ^~~~~~~~~
+dwm.c:52:9: note: this is the location of the previous definition
+   52 | #define INTERSECT(x,y,w,h,m)    (MAX(0, MIN((x)+(w),(m)->wx+(m)->ww) - MAX((x),(m)->wx)) \
+      |         ^~~~~~~~~
+In file included from dwm.c:307:
+config.h:87:5: error: expected ‘}’ before ‘{’ token
+   87 |     { MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
+      |     ^
+config.h:152:5: note: in expansion of macro ‘TAGKEYS’
+  152 |     TAGKEYS(                        XK_2,                      1)
+      |     ^~~~~~~
+config.h:107:21: note: to match this ‘{’
+  107 | static Key keys[] = {
+      |                     ^
+dwm.c:224:13: warning: ‘setcurrentdesktop’ declared ‘static’ but never defined [-Wunused-function]
+  224 | static void setcurrentdesktop(void);
+      |             ^~~~~~~~~~~~~~~~~
+dwm.c:225:13: warning: ‘setdesktopnames’ declared ‘static’ but never defined [-Wunused-function]
+  225 | static void setdesktopnames(void);
+      |             ^~~~~~~~~~~~~~~
+dwm.c:231:13: warning: ‘setnumdesktops’ declared ‘static’ but never defined [-Wunused-function]
+  231 | static void setnumdesktops(void);
+      |             ^~~~~~~~~~~~~~
+dwm.c:233:13: warning: ‘setviewport’ declared ‘static’ but never defined [-Wunused-function]
+  233 | static void setviewport(void);
+      |             ^~~~~~~~~~~
+dwm.c: In function ‘spawnbar’:
+dwm.c:1902:17: warning: ignoring return value of ‘system’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1902 |                 system(altbarcmd);
+      |                 ^~~~~~~~~~~~~~~~~
+dwm.c: At top level:
+dwm.c:2424:1: warning: ‘swapwindow’ defined but not used [-Wunused-function]
+ 2424 | swapwindow(const Arg *arg)
+      | ^~~~~~~~~~
+dwm.c:2412:1: warning: ‘zoom’ defined but not used [-Wunused-function]
+ 2412 | zoom(const Arg *arg)
+      | ^~~~
+config.h:105:20: warning: ‘chromium’ defined but not used [-Wunused-variable]
+  105 | static const char *chromium[] = { "chromium", NULL };
+      |                    ^~~~~~~~
+config.h:104:20: warning: ‘emacsclient’ defined but not used [-Wunused-variable]
+  104 | static const char *emacsclient[]  = { "emacsclient", "-c", "-a", "", NULL };
+      |                    ^~~~~~~~~~~
+make: *** [Makefile:12: dwm.o] Error 1
