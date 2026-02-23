@@ -175,6 +175,7 @@
     pokemon-colorscripts
     lsd
     dmenu
+    fzf
   ];
 
   fonts = {
