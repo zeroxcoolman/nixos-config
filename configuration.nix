@@ -46,6 +46,15 @@
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
 
+  security.doas.enable = true;
+  security.doas.extraRules = [
+    {
+      users = [ "ehsab" ];
+      persist = true;
+      keepEnv = true;
+    }
+  ];
+
   # ass nvidia stuff
   services.xserver.videoDrivers = [ "nvidia" ];
 
@@ -144,8 +153,10 @@
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-wlr ];
   };
+  xdg.portal.config.common.default = "*";
 
   environment.systemPackages = with pkgs; [
+    doas
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     git
@@ -172,7 +183,7 @@
     nerd-fonts.jetbrains-mono
     btop
     acpi
-    xorg.xrdb
+    xrdb
     discord
     pokemon-colorscripts
     lsd
