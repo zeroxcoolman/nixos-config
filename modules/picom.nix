@@ -5,9 +5,7 @@
   systemd.user.services.picom = {
     Unit = {
       Description = "Picom compositor";
-      ConditionPathExists = "/tmp/.X11-unix/X0";
       After = [ "graphical-session-pre.target" ];
-      Wants = [ "graphical-session-pre.target" ];
     };
 
     Service = {
