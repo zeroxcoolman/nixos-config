@@ -55,6 +55,8 @@
     }
   ];
 
+  security.sudo.enable = false;
+
   # ass nvidia stuff
   services.xserver.videoDrivers = [ "nvidia" ];
 
