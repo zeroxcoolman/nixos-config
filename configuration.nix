@@ -89,7 +89,7 @@
 
   services.flatpak.enable = true;
 
-  services.flatpak.remote = {
+  services.flatpak.remotes = {
     flathub = {
       url = "https://dl.flathub.org/repos/flathub.flatpakrepo";
       gpgVerify = true;
@@ -185,6 +185,7 @@
     lsd
     dmenu
     fzf
+    flatpak
   ];
 
   fonts = {
