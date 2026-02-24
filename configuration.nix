@@ -86,8 +86,17 @@
   services.picom.enable = false;
 
   programs.fish.enable = true;
+
   services.flatpak.enable = true;
-  hardware.opengl = {
+
+  services.flatpak.remote = {
+    flathub = {
+      url = "https://dl.flathub.org/repos/flathub.flatpakrepo";
+      gpgVerify = true;
+    };
+  };
+
+  hardware.graphics = {
     enable = true;
   };
 
