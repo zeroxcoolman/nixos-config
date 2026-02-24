@@ -1,7 +1,3 @@
-# Edit this configuration file to define what should be installed on
-#  your system. Help is available in the configuration.nix(5) man page, on
-# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
 {
   config,
   lib,
@@ -11,7 +7,6 @@
 }:
 {
   imports = [
-    # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
 
@@ -33,15 +28,12 @@
 
   boot.kernelPackages = pkgs.linuxPackages;
 
-  networking.hostName = "crawlere30"; # Define your hostname.
+  networking.hostName = "crawlere30";
 
-  # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
   time.timeZone = "Europe/London";
 
-  # Turn bluetooth on.
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
@@ -57,7 +49,6 @@
 
   security.sudo.enable = false;
 
-  # ass nvidia stuff
   services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.nvidia = {
@@ -68,9 +59,8 @@
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
 
-    # PRIME configuration for your laptop
     prime = {
-      intelBusId = "PCI:0:2:0"; # lspci
+      intelBusId = "PCI:0:2:0";
       nvidiaBusId = "PCI:1:0:0";
       offload.enable = true;
       offload.enableOffloadCmd = true;
@@ -145,7 +135,7 @@
   users.users.ehsab = {
     isNormalUser = true;
     shell = pkgs.fish;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" ];
     packages = with pkgs; [
       tree
     ];
@@ -161,8 +151,8 @@
 
   environment.systemPackages = with pkgs; [
     doas
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
+    vim
     git
     fastfetch
     alacritty
@@ -203,6 +193,6 @@
     ];
   };
 
-  system.stateVersion = "25.11"; # Did you read the comment?
+  system.stateVersion = "25.11";
 
 }

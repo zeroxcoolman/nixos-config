@@ -4,7 +4,6 @@ let
   dotfiles = "${config.home.homeDirectory}/mydotfilesprivate/";
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
 
-  # Standard .config/directory
   configs = {
     nvim = "nvim";
     rofi = "rofi";

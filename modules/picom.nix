@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-
   systemd.user.services.picom = {
     Unit = {
       Description = "Picom compositor";
@@ -17,5 +16,4 @@
       WantedBy = [ "default.target" ];
     };
   };
-
 }
